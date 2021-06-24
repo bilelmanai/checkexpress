@@ -1,0 +1,12 @@
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+
+  <body>
+    <%- include("./partials/nav.ejs") %> <% if (date.getDay() == 0 ||
+    date.getDay() == 6 || date.getHours() < 9 || date.getHours() >= 17) { %>
+    <h2>We are closed</h2>
+    <% } else {%>
+    <div class="not-found content">OOPS, page not found :)</div>
+    <% }%> <%- include("./partials/footer.ejs") %>
+  </body>
+</html>
